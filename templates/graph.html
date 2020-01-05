@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    <table style="border-collapse:collapse; table-layout:fixed;width:100%">
+    	<tr>
+    		<td ng-click="buildGraph('line')"><img src="static/line.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('bar')"><img src="static/column.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('barstack')"><img src="static/columnstack.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('column')"><img src="static/bar.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('columnstack')"><img src="static/barstack.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('area')"><img src="static/area.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('scatter')"><img src="static/scatter.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('donut')"><img src="static/donut.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="buildGraph('pie')"><img src="static/pie.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="showMean('line')"><img src="static/mean.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="showStdDev()"><img src="static/stddev.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="showFit(1)"><img src="static/linearfore.png" style="height:50px;width:50px"></img></td>
+    		<td ng-click="showFit(2)"><img src="static/polyfore.png" style="height:50px;width:50px"></img></td>
+    	</tr>
+    	<tr style="vertical-align:top">
+    		<td>Line</td>
+    		<td>Bar</td>
+    		<td>Bar Stack</td>
+    		<td>Column</td>
+    		<td>Column Stack</td>
+    		<td>Area</td>
+    		<td>Scatter</td>
+    		<td>Donut</td>
+    		<td>Pie</td>
+    		<td>Mean</td>
+    		<td>Std Dev</td>
+    		<td>Linear Forecast</td>
+    		<td>Poly Forecast</td>
+    	</tr>
+    </table>
+    <div class="row">
+      <div id="chartdiv" ng-init="buildGraph()" style="width:1200px;height:400px">
+      </div>
+    </div>
+  </div>
+</div>

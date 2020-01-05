@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+  <title>Query2Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="static/app.js"></script>
+  <script src="static/popper.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart','annotatedtimeline','charteditor','treemap']});
+    google.charts.load('visualization', '1.0', {'packages':['table']});
+  </script>
+</head>
+  <body ng-controller="RootController">
+    <div class="jumbotron text-center" style="margin-bottom:0;padding:5px">
+      <h2><a href="#">EasyRABI</a></h2>
+      <p>Easy Reporting, Analytics and Business Intelligence Solution for MySQL!</p>
+    </div>
+    <div class="container" style="margin-top:30px">
+      <div class="row" style="padding-top:10px">
+        <div ng-view style="width:100%"></div>
+      </div>
+    </div>
+  </body>
+</html>

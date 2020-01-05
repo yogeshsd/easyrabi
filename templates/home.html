@@ -1,0 +1,74 @@
+<style>
+  option{
+    padding:5px;
+    padding-left:10px;
+  }
+</style>
+
+<div class="card">
+  <div class="card-header bg-dark text-white">SQL Query</div>
+  <div class="card-body">
+    <textarea ng-model="$parent.sqlQuery" id="sqltext" rows="4" style="width:100%">
+    </textarea>
+    <button id="queryButton" class="btn btn-primary" data-ng-click="query()">Query</button>
+  </div>
+</div>
+
+<div ng-show="isready==false">
+  <p>Please wait for results, your query is being executed</p>
+  <div class="spinner-border"></div>
+</div>
+
+<div class="card" ng-show="issuccess || iserror ">
+  <div class="card-header bg-dark text-white">Select Axis</div>
+  <div class="card-body">
+    <div ng-show="iserror">
+        //errorText//
+    </div>
+    <div ng-show="issuccess">
+      <div class="container">
+        <div class="row">
+          <div class="input-group mb-3" style="width:60%">
+            <div class="input-group-prepend"  style="width:50%">
+              <label class="input-group-text" for="xAxisSelect" style="width:100%">Select X Axis</label>
+            </div>
+            <select ng-model="$parent.xaxis" ng-options="column.name for column in data.columns | filter: {isDim:true} track by column.name" class="custom-select" id="xAxisSelect">
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group mb-3" style="width:60%">
+            <div class="input-group-prepend"  style="width:50%">
+              <label class="input-group-text" for="zAxisSelect" style="width:100%">Select Z Axis</label>
+            </div>
+            <select ng-model="$parent.zaxis" ng-options="column.name for column in data.columns | filter: {isDim:true} track by column.name" class="custom-select" id="zAxisSelect">
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group mb-3" style="width:60%">
+            <div class="input-group-prepend"  style="width:50%">
+              <label class="input-group-text" for="yAxisSelect" style="width:100%">Select Y Axis</label>
+            </div>
+            <select style="width:50%" class="selectpicker" multiple data-live-search="true" ng-model="$parent.yaxis" ng-options="column.name for column in data.columns | filter: {isFact:true} track by column.name " class="custom-select" id="yAxisSelect">
+              <option>None</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group mb-3" style="width:60%">
+            <div class="input-group-prepend"  style="width:50%">
+              <label class="input-group-text" for="chartTypeSelect"  style="width:100%">Select Chart</label>
+            </div>
+            <select ng-model="$parent.selectedChartType" ng-options="chartType for chartType in chartTypes" class="custom-select" id="chartTypeSelect">
+            </select>
+          </div>
+        </div>
+      </div>
+      <button id="queryButton" class="btn btn-primary" ng-click="graph()">Graph</button>
+    </div>
+  </div>
+</div>
