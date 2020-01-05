@@ -1,4 +1,4 @@
-angular.module("demo", ["ngRoute"])
+angular.module("easyrabi", ["ngRoute"])
 .config(function($routeProvider) {
   $routeProvider
     .when("/graph",{templateUrl:"/graph"})
