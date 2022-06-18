@@ -5,7 +5,7 @@ This software lets you run SQL queries against the MySQL database, configure dim
 Users can also perform visual analytics of the data being plotted by adding mean, standard deviation, linear forecasting and polynomial forecast.
 
 #### Statistical Analysis - New Feature
-![alt text](https://github.com/yogeshsd/easyrabi/blob/master/sample_images/sample_report1.PNG)
-![alt text](https://github.com/yogeshsd/easyrabi/blob/master/sample_images/sample_report2.PNG)
-![alt text](https://github.com/yogeshsd/easyrabi/blob/master/sample_images/sample_report3.PNG)
+![alt text](https://github.com/yogeshsd/easyrabi/blob/master/samples/sample1.PNG)
+![alt text](https://github.com/yogeshsd/easyrabi/blob/master/samples/sample2.PNG)
+![alt text](https://github.com/yogeshsd/easyrabi/blob/master/samples/sample3.PNG)
 
